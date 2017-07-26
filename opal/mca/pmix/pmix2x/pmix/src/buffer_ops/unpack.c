@@ -49,7 +49,9 @@ pmix_status_t pmix_bfrop_unpack(pmix_buffer_t *buffer,
     /* if user provides a zero for num_vals, then there is no storage allocated
      * so return an appropriate error
      */
+
      if (0 == *num_vals) {
+
         pmix_output_verbose(20, pmix_globals.debug_output, "pmix_bfrop_unpack: inadequate space ( %p, %p, %lu, %d )\n",
                             (void*)buffer, dst, (long unsigned int)*num_vals, (int)type);
         return PMIX_ERR_UNPACK_INADEQUATE_SPACE;
